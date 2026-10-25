@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<style>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    background-color: black;
+}
+
+
+section{
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image1{
+    width: 70%;
+    height: 300px;
+    background-image: url(images/img_4.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+.image2{
+    width: 28%;
+    height: 300px;
+    background-image: url(images/img_5.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.image3{
+    width: 25%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_1.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.image4{
+    width: 45%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_2.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.image5{
+    width: 25%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_3.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.image6{
+    width: 45%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_7.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+.image7{
+    width: 45%;
+    height: 300px;
+    margin-right: 60px;
+    margin-top: 20px;
+    background-image: url(images/img_8.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.image8{
+    width: 25%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_9.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.image9{
+    width: 45%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_10.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.image10{
+    width: 25%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_6.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.image11{
+    width: 30%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_1.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.image12{
+    width: 35%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_2.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.image13{
+    width: 30%;
+    height: 300px;
+    margin-top: 20px;
+    background-image: url(images/img_3.avif);
+    background-size: cover;
+    background-position: center;
+
+}
+
+                /* OVERLAY SECTION */
+
+
+
+.image1, .image2, .image3, .image4, .image5,
+.image6, .image7, .image8, .image9, .image10,
+.image11, .image12, .image13 {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image1:hover .overlay,
+.image2:hover .overlay,
+.image3:hover .overlay,
+.image4:hover .overlay,
+.image5:hover .overlay,
+.image6:hover .overlay,
+.image7:hover .overlay,
+.image8:hover .overlay,
+.image9:hover .overlay,
+.image10:hover .overlay,
+.image11:hover .overlay,
+.image12:hover .overlay,
+.image13:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.overlay p {
+    font-size: 11px;
+    color: #ccc;
+}
+
+
+
+
+.navbar{
+    width: 25%;
+    height: 50vh;
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span{
+    margin-right: -100px;
+    color: #f5392c;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    font-family: sans-serif;
+}
+
+li:hover a{
+    color: #f5392c;
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+nav{
+    margin-right: -150px;
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-icons{
+    width: 50%;
+    height: 40px;
+    margin-right: -100px;
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.social-icons i{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.social-icons i:hover{
+    transform: scale(1.3);
+    background-color: #f5392c;
+}
+
+</style>
+
+
+
+</head>
+<body>
+    
+<section>
+
+<div class="image1">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image2">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image3">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image4">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image5">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image6">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image7">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image8">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image9">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+
+<div class="image10">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image11">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+
+<div class="image12">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+<div class="image13">
+    <div class="overlay">
+        <h3>Photos Title Here</h3>
+        <p>42 PHOTOS</p>
+    </div>
+</div>
+
+
+</section>
+
+<div class="navbar">
+    <span>SHUTTER</span>
+        <nav>
+            <li><a href="">HOME</a></li>
+            <li><a href="">PHOTOS</a></li>
+            <li><a href="">BIO</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTECT</a></li>
+        </nav>
+       <div class="social-icons">
+         <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-threads"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+    </div>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
